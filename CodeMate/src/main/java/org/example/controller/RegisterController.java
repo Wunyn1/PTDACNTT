@@ -1,4 +1,5 @@
 package org.example.controller;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +9,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import org.example.service.impl.AuthServiceImpl;
 import org.example.utils.ChangeFXML;
+import org.example.utils.EmailUtils;
+import org.example.utils.HashedPasswordUtils;
+import org.example.utils.UsernameUtils;
 
 public class RegisterController {
     @FXML
@@ -45,12 +49,24 @@ public class RegisterController {
             errorUsername.setText("Tên đăng nhập không được để trống!");
             checkEmpty = true;
         }
+        else if(!UsernameUtils.isValidUsername(username)) {
+            errorUsername.setText("Tên đăng nhập không hợp lệ!");
+            checkEmpty = true;
+        }
         if(email.isEmpty()){
             errorEmail.setText("Email không được để trống!");
             checkEmpty = true;
         }
+        else if(!EmailUtils.isValidEmail(email)) {
+            errorEmail.setText("Email không đúng định dạng!");
+            checkEmpty = true;
+        }
         if(password.isEmpty()){
             errorPassword.setText("Mật khẩu không được để trống!");
+            checkEmpty = true;
+        }
+        else if(!HashedPasswordUtils.isValidPassword(password)) {
+            errorPassword.setText("Mật khẩu không hợp lệ!");
             checkEmpty = true;
         }
         if(checkPassword.isEmpty()){
@@ -81,7 +97,7 @@ public class RegisterController {
         ChangeFXML.changeFXML(event, "/view/login.fxml");
     }
 
-    private void resetErrorEmpty(){
+    private void resetErrorEmpty() {
         errorFullname.setText("");
         errorUsername.setText("");
         errorEmail.setText("");
