@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Properties;
 
 public class EmailUtils {
+    private static final String email_regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
     private static final String emailFrom = "sakuraminekochan@gmail.com";
     private static final String password = "yhxtlucitucjlwse";
 
@@ -42,5 +43,9 @@ public class EmailUtils {
             System.out.println("Lỗi ở đây");
             e.printStackTrace();
         }
+    }
+
+    public static boolean isValidEmail(String email) {
+        return email.matches(email_regex);
     }
 }
