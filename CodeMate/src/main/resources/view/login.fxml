@@ -78,7 +78,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="registerLG" layoutX="189.0" layoutY="479.0" mnemonicParsing="false" onAction="#registerLG" style="-fx-background-color: transperant;" text="Đăng ký ngay" textFill="RED">
+            <Button fx:id="registerLG" layoutX="189.0" layoutY="479.0" mnemonicParsing="false" onAction="#registerLG" style="-fx-background-color: transparent;" text="Đăng ký ngay" textFill="RED">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
