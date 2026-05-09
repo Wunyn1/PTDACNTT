@@ -14,7 +14,6 @@ public class DBConnection {
         return null;
     }
 
-
     public static EntityManager getEntityManager(){
         if(entityManagerFactory == null || !entityManagerFactory.isOpen()){
             entityManagerFactory = buildEntityManagerFactory();
