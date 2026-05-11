@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<VBox prefHeight="650.0" prefWidth="900.0" spacing="20" style="-fx-padding: 30; -fx-background-color: #0f172a;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ToDoController">
+
+    <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#comeBackTodolist" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../assets/icon/back-button.png" />
+        </image>
+        <VBox.margin>
+            <Insets left="-10.0" top="-10.0" />
+        </VBox.margin>
+    </ImageView>
+
+    <VBox fx:id="startDayBox" alignment="CENTER" spacing="20" VBox.vgrow="ALWAYS">
+        <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="DANH SÁCH CÔNG VIỆC" />
+        <Label style="-fx-text-fill: #94a3b8; -fx-font-size: 18px;" text="Chào buổi sáng! Sẵn sàng cho một ngày năng suất?" />
+        <Button onAction="#handleStartDay" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 15 30; -fx-background-radius: 10; -fx-cursor: hand;" text="BẮT ĐẦU NGÀY LÀM VIỆC" />
+    </VBox>
+
+    <VBox fx:id="mainTodoBox" managed="false" spacing="20" visible="false" VBox.vgrow="ALWAYS">
+
+        <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="CÔNG VIỆC HÔM NAY" />
+
+        <HBox spacing="10">
+            <TextField fx:id="txtTitle" promptText="Thêm việc mới..." style="-fx-background-color: #1e293b; -fx-text-fill: white; -fx-border-color: #334155; -fx-padding: 10; -fx-background-radius: 8;" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleAdd" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 8; -fx-cursor: hand;" text="+ THÊM" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button onAction="#filterAll" style="-fx-background-color: #334155; -fx-text-fill: white; -fx-background-radius: 5;" text="Tất cả" />
+            <Button onAction="#filterDone" style="-fx-background-color: #334155; -fx-text-fill: white; -fx-background-radius: 5;" text="Đã xong" />
+            <Button onAction="#filterUndone" style="-fx-background-color: #334155; -fx-text-fill: white; -fx-background-radius: 5;" text="Chưa xong" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleEndDay" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-background-radius: 15; -fx-font-weight: bold; -fx-padding: 8 15;" text="KẾT THÚC NGÀY" />
+        </HBox>
+
+        <ListView fx:id="listTodo" style="-fx-background-color: transparent; -fx-control-inner-background: #0f172a; -fx-background-insets: 0; -fx-padding: 0;" VBox.vgrow="ALWAYS" />
+
+        <VBox spacing="10">
+            <Label style="-fx-text-fill: #94a3b8; -fx-font-weight: bold;" text="Tiến độ hoàn thành" />
+            <ProgressBar fx:id="progressBar" maxWidth="Infinity" progress="0.0" style="-fx-min-height: 15;" />
+            <Label fx:id="lblProgress" style="-fx-text-fill: white;" text="0%" />
+        </VBox>
+    </VBox>
+</VBox>
