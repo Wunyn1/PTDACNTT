@@ -5,6 +5,8 @@ import org.example.model.User;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "todo_list")
 public class ToDoList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
