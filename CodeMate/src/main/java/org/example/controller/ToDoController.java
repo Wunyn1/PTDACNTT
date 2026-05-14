@@ -170,13 +170,12 @@ public class ToDoController implements Initializable {
             }
         });
     }
-
-    // Hàm hiện thông báo khích lệ so sánh với hôm qua
+    
     private void showMotivationAlert() {
         Alert motivation = new Alert(Alert.AlertType.INFORMATION);
         motivation.setTitle("CodeMate Coach");
         motivation.setHeaderText("🚀 Lời nhắn nhủ");
-        motivation.setContentText("Hệ thống ghi nhận bạn đã rất nỗ lực. Hãy nghỉ ngơi và sẵn sàng cho ngày mai nhé!");
+        motivation.setContentText("Hệ thống ghi nhận bạn đã rất nỗ lực. Hãy nghỉ ngơi!");
         motivation.show();
     }
 
