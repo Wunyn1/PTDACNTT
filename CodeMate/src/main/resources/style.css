@@ -1,0 +1,172 @@
+
+.main-background {
+    -fx-background-color: #0f172a;
+}
+
+
+.glow-circle {
+    -fx-fill: linear-gradient(to bottom, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.05));
+    -fx-effect: dropshadow(gaussian, #3b82f6, 80, 0.2, 0, 0);
+}
+
+
+.card-panel {
+    -fx-background-color: rgba(30, 41, 59, 0.7); /* Màu Slate đậm trong suốt */
+    -fx-background-radius: 40;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 20, 0, 0, 10);
+}
+
+
+.title-label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 5;
+}
+
+.status-label {
+    -fx-text-fill: #f1f5f9;
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+}
+
+.timer-display {
+    -fx-font-family: "Segoe UI Semibold", sans-serif;
+    -fx-font-size: 100px;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 15, 0, 0, 0);
+}
+
+
+.btn {
+    -fx-background-radius: 20;
+    -fx-padding: 12 30;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-min-width: 130px;
+}
+
+.btn-primary { -fx-background-color: #3b82f6; } /* Xanh Blue */
+.btn-success { -fx-background-color: #10b981; } /* Xanh Emerald */
+.btn-warning { -fx-background-color: #f59e0b; } /* Vàng Amber */
+
+.btn:hover { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+
+
+.work-mode { -fx-background-color: #1e1111; }
+.work-mode .timer-display { -fx-text-fill: #f87171; }
+
+.rest-mode { -fx-background-color: #111e14; }
+.rest-mode .timer-display { -fx-text-fill: #34d399; }
+.sidebar {
+    -fx-background-color: #0f172a;
+    -fx-padding: 20;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 15;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.menu-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: white;
+}
+
+.list-todo, .list-view {
+    -fx-background-color: #1e293b;
+    -fx-control-inner-background: #1e293b;
+    -fx-background-radius: 10;
+    -fx-border-color: #334155;
+}
+
+.todo-label {
+    -fx-text-fill: white;
+}
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: #1e293b;/* Thanh Progress */
+    .custom-progress {
+        -fx-background-radius: 10;
+    }
+
+    .custom-progress .track {
+        -fx-background-color: #1e293b; /* Nền thanh progress */
+        -fx-background-radius: 10;
+    }
+
+    .custom-progress .bar {
+        -fx-background-color: linear-gradient(to right, #3b82f6, #06b6d4); /* Màu xanh neon */
+        -fx-background-radius: 10;
+    }
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+    -fx-margin: 5;
+}
+
+.list-cell:hover {
+    -fx-background-color: #334155;
+}
+
+.input-field {
+    -fx-background-color: #1e293b;
+    -fx-text-fill: white;
+    -fx-border-color: #334155;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+}
+
+.modern-list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-control-inner-background: transparent;
+}
+
+.btn-filter {
+    -fx-background-color: #334155;
+    -fx-text-fill: #94a3b8;
+    -fx-background-radius: 15;
+    -fx-padding: 5 15;
+}
+.btn-filter:hover {
+    -fx-background-color: #475569;
+    -fx-text-fill: white;
+}
+
+
+.custom-progress .bar {
+    -fx-background-color: linear-gradient(to right, #3b82f6, #06b6d4);
+    -fx-background-radius: 10;
+}
+.custom-progress .track {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 10;
+}
+.tab-container {
+    -fx-background-color: #1a3a3a;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+    -fx-spacing: 10;
+}
